@@ -2,13 +2,13 @@
 
 import React, { useCallback, useEffect, useState } from 'react'
 
-interface WhoAmIClientProps {
+interface WhoAmISeverActionProps {
   onGetUserAction: () =>  Promise<string>;
 }
 
-const WhoAmIClient = ({
+const WhoAmISeverAction = ({
   onGetUserAction
-}: WhoAmIClientProps) => {
+}: WhoAmISeverActionProps) => {
   const [userName, setUserName] = useState('');
 
   const settingUserName = useCallback(async() => {
@@ -26,8 +26,8 @@ const WhoAmIClient = ({
   }, [onGetUserAction, settingUserName])
   
   return (
-    <div>WhoAmIClient: {userName}</div>
+    <div>WhoAmISeverAction: {userName}</div>
   )
 }
 
-export default WhoAmIClient
+export default WhoAmISeverAction
