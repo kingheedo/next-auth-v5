@@ -1,6 +1,7 @@
 import { auth } from '@/auth'
 import React from 'react'
 import WhoAmIClient from './WhoAmI.client';
+import WhoAmIApi from './WhoAmIApi';
 
 const TextRoutePage = async() => {
   const session = await auth();
@@ -15,6 +16,7 @@ const TextRoutePage = async() => {
     <main>
       <div>TextRoutePage {session?.user?.name}</div>
         <WhoAmIClient onGetUserAction={onGetUserAction}/>
+        <WhoAmIApi/>
     </main>
   )
 }
