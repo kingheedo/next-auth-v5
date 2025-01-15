@@ -4,8 +4,6 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 const AuthButtonClient = () => {
 	const { data: session } = useSession();
 
-	console.log('auth button client session', session);
-
 	return (
 		session?.user
 			? <button onClick={async () => {

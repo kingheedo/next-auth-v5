@@ -6,7 +6,6 @@ import { SessionProvider } from 'next-auth/react';
 const AuthButton = async () => {
     const session = await auth();
 
-    console.log('auth button server session', session);
     if (session && session?.user) {
         session.user = {
             name: session.user.name,
